@@ -1,0 +1,25 @@
+{
+    "name": "samueltissot/wp_route",
+    "type": "library",
+    "keywords": ["wordpress", "routing"],
+    "homepage": "https://github.com/SamuelTissot/WP_Route",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Samuel Tissot",
+            "email": "tissotjobin@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "samueltissot\\WP_Route\\": "src/",
+            "samueltissot\\WP_Route_Test\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "^7"
+    }
+}

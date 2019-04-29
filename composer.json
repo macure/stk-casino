@@ -1,0 +1,5 @@
+{
+    "require": {
+        "samueltissot/wp_route": "^0.3.0"
+    }
+}

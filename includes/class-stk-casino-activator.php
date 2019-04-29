@@ -1,7 +1,5 @@
 <?php
 
-require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-stk-casino-importer.php';
-
 /**
  * Fired during plugin activation
  *
@@ -34,7 +32,31 @@ class Stk_Casino_Activator
      */
     public static function activate()
     {
+        // Update options
+        self::updateOptions();
+
         // Import casino starter set
         Stk_Casino_Importer::import();
+    }
+
+    /**
+     * Update site wide options
+     *
+     * @return void
+     */
+    public static function updateOptions()
+    {
+        // Intuitive Custom post order
+        if (get_option('hicpo_options')) {
+            update_option('hicpo_options', [
+                'objects' => [
+                    0 => 'post',
+                    1 => 'casino',
+                ],
+                'tags' => [
+                    0 => 'category',
+                ],
+            ]);
+        }
     }
 }

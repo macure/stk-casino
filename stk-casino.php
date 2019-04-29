@@ -1,5 +1,7 @@
 <?php
 
+require_once 'vendor/autoload.php';
+
 /**
  * The plugin bootstrap file
  *
@@ -26,8 +28,8 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if (! defined('WPINC')) {
+    die;
 }
 
 /**
@@ -35,34 +37,36 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'STK_CASINO_VERSION', '1.0.0' );
+define('STK_CASINO_VERSION', '1.0.0');
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-stk-casino-activator.php
  */
-function activate_stk_casino() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-stk-casino-activator.php';
-	Stk_Casino_Activator::activate();
+function activate_stk_casino()
+{
+    require_once plugin_dir_path(__FILE__) . 'includes/class-stk-casino-activator.php';
+    Stk_Casino_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-stk-casino-deactivator.php
  */
-function deactivate_stk_casino() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-stk-casino-deactivator.php';
-	Stk_Casino_Deactivator::deactivate();
+function deactivate_stk_casino()
+{
+    require_once plugin_dir_path(__FILE__) . 'includes/class-stk-casino-deactivator.php';
+    Stk_Casino_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_stk_casino' );
-register_deactivation_hook( __FILE__, 'deactivate_stk_casino' );
+register_activation_hook(__FILE__, 'activate_stk_casino');
+register_deactivation_hook(__FILE__, 'deactivate_stk_casino');
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-stk-casino.php';
+require plugin_dir_path(__FILE__) . 'includes/class-stk-casino.php';
 
 /**
  * Begins execution of the plugin.
@@ -73,10 +77,9 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-stk-casino.php';
  *
  * @since    1.0.0
  */
-function run_stk_casino() {
-
-	$plugin = new Stk_Casino();
-	$plugin->run();
-
+function run_stk_casino()
+{
+    $plugin = new Stk_Casino();
+    $plugin->run();
 }
 run_stk_casino();

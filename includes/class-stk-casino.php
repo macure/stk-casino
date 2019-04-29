@@ -124,6 +124,22 @@ class Stk_Casino
          */
         require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-stk-casino-public.php';
 
+        /**
+         * This class is responsible for importing an initial set of casinos
+         * on plugin activation
+         */
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-stk-casino-importer.php';
+
+        /**
+         * This class is responsible for cloacking affiliate links
+         */
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-stk-casino-cloak-affiliate-link.php';
+
+        /**
+         * This class is responsible for downloading remote images
+         */
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-stk-casino-download-remote-image.php';
+
         $this->loader = new Stk_Casino_Loader();
     }
 
