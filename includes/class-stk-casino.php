@@ -140,6 +140,12 @@ class Stk_Casino
          */
         require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-stk-casino-download-remote-image.php';
 
+        /**
+         * This class is responsible for loading shortcodes
+         */
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-stk-casino-shortcodes.php';
+
+
         $this->loader = new Stk_Casino_Loader();
     }
 
@@ -184,11 +190,13 @@ class Stk_Casino
     private function define_public_hooks()
     {
         $plugin_public = new Stk_Casino_Public($this->get_plugin_name(), $this->get_version());
+        $plugin_shortcodes = new Stk_Casino_Shortcodes();
 
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
         $this->loader->add_action('init', $plugin_public, 'register_custom_post_types');
         $this->loader->add_action('acf/init', $plugin_public, 'register_local_field_group');
+        $this->loader->add_action('init', $plugin_shortcodes, 'register_shortcodes');
     }
 
     /**

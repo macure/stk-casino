@@ -65,7 +65,7 @@ class Stk_Casino_Importer
                     }
 
                     // Download feature image
-                    $download_remote_image = new Stk_Casino_Download_Remote_Image($casino['attachments']['feature_image']['url'], $casino['attachments']['feature_image'][ 'attachment_data']);
+                    $download_remote_image = new Stk_Casino_Download_Remote_Image($casino['attachments']['feature_image']['url'], $casino['attachments']['feature_image']['attachment_data']);
                     $attachment_id = $download_remote_image->download();
 
                     if ($attachment_id) {
@@ -106,10 +106,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 2000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 100
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 100,
                     'user_rating' => 5,
                     'our_rating' => 5,
                     'affiliate_link' => 'http://www.norskeaffiliates.com/redirector?url=http://www.norskeautomater.com&userid=10&tracker=9842'
@@ -136,10 +134,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 3000,
-                    'spins' => [
-                        'spin_type' => 'real',
-                        'spin_number' => 30
-                    ],
+                    'spin_type' => 'real',
+                    'spin_number' => 30,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://media.honestpartners.com/redirect.aspx?pid=10923&bid=1552'
@@ -165,10 +161,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 5000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 0
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 0,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://media.comeon.com/tracking.php?tracking_code&aid=110575&mid=1784&sid=384493&pid=490'
@@ -194,10 +188,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 2500,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 0
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 0,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://ads.norgesspill.com/tracking.php?tracking_code&aid=110575&mid=906&sid=384493&pid=95'
@@ -222,10 +214,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 500,
                     'bonus_maximum' => 600,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 20
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 20,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://media.folkeautomaten.com/tracking.php?tracking_code&aid=110575&mid=1736&sid=384493&pid=442'
@@ -251,10 +241,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 1000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 110
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 110,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://media.playamopartners.com/redirect.aspx?pid=3897&bid=1915&lpid=8'
@@ -280,10 +268,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 1000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 50
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 50,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'http://wlchanz.adsrv.eacdn.com/C.ashx?btag=a_2811b_91c_&affid=753&siteid=2811&adid=91&c='
@@ -309,10 +295,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 200,
                     'bonus_maximum' => 5000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 30
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 30,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'http://wlivyaffiliates.adsrv.eacdn.com/C.ashx?btag=a_10462b_249c_&affid=2220&siteid=10462&adid=249&c='
@@ -338,10 +322,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 1000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 25
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 25,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://media.playamopartners.com/redirect.aspx?pid=3897&bid=1931&lpid=45'
@@ -367,10 +349,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 1000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 300
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 300,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://GenesisCasino.tracking-genesisaffiliates.com/redirect.aspx?pid=155630&bid=4375'
@@ -396,10 +376,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 7000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 100
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 100,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://media.wishmaker.partners/redirect.aspx?pid=3227&lpid=19&bid=1488'
@@ -425,10 +403,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 1000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 30
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 30,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://media.playamopartners.com/redirect.aspx?pid=3897&bid=1927&lpid=9'
@@ -454,10 +430,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 1000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 100
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 100,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://media.playamopartners.com/redirect.aspx?pid=3897&bid=1522&lpid=6'
@@ -483,10 +457,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 2000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 100
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 100,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'http://online.mrplaypartners.com/promoRedirect?key=ej0xMzUzMDg4MiZsPTEzNTI1MzA0JnA9ODM1NQ%3D%3D'
@@ -512,10 +484,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 200,
                     'bonus_maximum' => 2000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 20
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 20,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://vegas.riveraffiliates.com/tracking.php?tracking_code&aid=100374&mid=1422&sid=338103&pid=260'
@@ -541,10 +511,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 200,
                     'bonus_maximum' => 2000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 50
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 50,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://track.adform.net/C/?bn=28886309'
@@ -570,10 +538,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 200,
                     'bonus_maximum' => 10000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 200
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 200,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://frankfred.epic.partners/tracking.php?tracking_code&aid=100376&mid=868&sid=2752&pid=2'
@@ -599,10 +565,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 600,
                     'bonus_maximum' => 500,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 100
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 100,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'https://media.getlucky.com/tracking.php?tracking_code&aid=110575&mid=2005&sid=384493&pid=643'
@@ -628,10 +592,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 500,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 210
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 210,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'http://wl21com.adsrv.eacdn.com/C.ashx?btag=a_2236b_235c_&affid=641&siteid=2236&adid=235&c='
@@ -657,10 +619,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 100,
                     'bonus_maximum' => 2500,
-                    'spins' => [
-                        'spin_type' => 'big',
-                        'spin_number' => 10
-                    ],
+                    'spin_type' => 'big',
+                    'spin_number' => 10,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'http://record.betsafe.com/_MZFmhmtOC4SV0EOOSRKudCPK8EQLgMPe/1/&media=184380&campaign=1'
@@ -686,10 +646,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 200,
                     'bonus_maximum' => 25000,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 50
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 50,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'http://wlivyaffiliates.adsrv.eacdn.com/C.ashx?btag=a_11254b_228c_&affid=2421&siteid=11254&adid=228&c='
@@ -714,10 +672,8 @@ class Stk_Casino_Importer
                 'custom_fields' => [
                     'bonus_percentage' => 50,
                     'bonus_maximum' => 4990,
-                    'spins' => [
-                        'spin_type' => 'free',
-                        'spin_number' => 111
-                    ],
+                    'spin_type' => 'free',
+                    'spin_number' => 111,
                     'user_rating' => 4,
                     'our_rating' => 4,
                     'affiliate_link' => 'http://www.funcasinoaffiliates.com/redirector?url=http://www.funcasino.com&userid=776&tracker=35335'
