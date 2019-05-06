@@ -169,9 +169,13 @@ class Stk_Casino
     private function define_admin_hooks()
     {
         $plugin_admin = new Stk_Casino_Admin($this->get_plugin_name(), $this->get_version());
+        $plugin_settings = new Stk_Casino_Admin_Settings($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
+
+        $this->loader->add_action('admin_menu', $plugin_settings, 'setup_plugin_options_menu');
+        $this->loader->add_action('admin_init', $plugin_settings, 'initialize_general_options');
     }
 
     /**

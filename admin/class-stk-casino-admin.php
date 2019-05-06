@@ -20,7 +20,8 @@
  * @subpackage Stk_Casino/admin
  * @author     Marko Curcic <marko.curcic@stkfinans.no>
  */
-class Stk_Casino_Admin {
+class Stk_Casino_Admin
+{
 
 	/**
 	 * The ID of this plugin.
@@ -47,11 +48,33 @@ class Stk_Casino_Admin {
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct($plugin_name, $version)
+	{
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+		$this->load_dependencies();
+	}
+
+	/**
+	 * Load the required dependencies for the Admin facing functionality.
+	 *
+	 * Include the following files that make up the plugin:
+	 *
+	 * - Wppb_Demo_Plugin_Admin_Settings. Registers the admin settings and page.
+	 *
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function load_dependencies()
+	{
+		/**
+		 * The class responsible for orchestrating the actions and filters of the
+		 * core plugin.
+		 */
+		require_once plugin_dir_path(dirname(__FILE__)) .  'admin/class-stk-casino-admin-settings.php';
 	}
 
 	/**
@@ -59,7 +82,8 @@ class Stk_Casino_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_styles() {
+	public function enqueue_styles()
+	{
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -73,8 +97,7 @@ class Stk_Casino_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/stk-casino-admin.css', array(), $this->version, 'all' );
-
+		wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/stk-casino-admin.css', array(), $this->version, 'all');
 	}
 
 	/**
@@ -82,7 +105,8 @@ class Stk_Casino_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts() {
+	public function enqueue_scripts()
+	{
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -96,8 +120,6 @@ class Stk_Casino_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/stk-casino-admin.js', array( 'jquery' ), $this->version, false );
-
+		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/stk-casino-admin.js', array('jquery'), $this->version, false);
 	}
-
 }

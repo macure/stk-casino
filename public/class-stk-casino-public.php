@@ -112,12 +112,12 @@ class Stk_Casino_Public
          * Post Type: Casinos.
          */
         $labels = array(
-            "name" => __("Casinos", "minisite"),
-            "singular_name" => __("Casino", "minisite"),
+            "name" => __("Casinos", "stk-casino"),
+            "singular_name" => __("Casino", "stk-casino"),
         );
 
         $args = array(
-            "label" => __("Casinos", "minisite"),
+            "label" => __("Casinos", "stk-casino"),
             "labels" => $labels,
             "description" => "",
             "public" => true,
