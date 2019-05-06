@@ -44,7 +44,7 @@ class Stk_Casino_Activator
     public static function updateOptions()
     {
         // Intuitive Custom post order
-        if (get_option('hicpo_options')) {
+        if (!get_option('hicpo_options')) {
             update_option('hicpo_options', [
                 'objects' => [
                     0 => 'post',
