@@ -36,7 +36,7 @@ class Stk_Casino_Activator
         self::updateOptions();
 
         // Import casino starter set
-        Stk_Casino_Importer::import();
+        // Stk_Casino_Importer::import();
     }
 
     /**
