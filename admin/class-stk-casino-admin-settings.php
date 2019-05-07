@@ -72,7 +72,8 @@ class Stk_Casino_Admin_Settings
     {
 
         return [
-            'currency_alpha_code' => 'KR'
+            'currency_alpha_code' => 'KR',
+            'currency_code_position' => 'after'
         ];
     }
 
@@ -130,7 +131,15 @@ public function initialize_general_options()
     add_settings_field(
         'Currency alpha code',
         __('Currency aplha code', 'stk-casino'),
-        array($this, 'currency_alpha_code_callback'),
+        [$this, 'currency_alpha_code_render'],
+        'stk_casino_general_options',
+        'stk_currency_section'
+    );
+
+    add_settings_field(
+        'Currency code position',
+        __('Currency code position', 'stk-casino'),
+        [$this, 'currency_code_position_render'],
         'stk_casino_general_options',
         'stk_currency_section'
     );
@@ -141,10 +150,28 @@ public function initialize_general_options()
     );
 }
 
-public function currency_alpha_code_callback()
+public function currency_alpha_code_render()
 {
+    $options_default = $this->default_general_options();
     $options = get_option('stk_casino_general_options');
-    // Render the output
+
+    // Set the default value if not exists
+    if (!isset($options['currency_alpha_code'])) $options['currency_alpha_code'] = $options_default['currency_alpha_code'];
+    // Render input
     echo '<input type="text" id="stk_casino_currency_alpha_code" name="stk_casino_general_options[currency_alpha_code]" value="' . $options['currency_alpha_code'] . '" />';
+}
+public function currency_code_position_render()
+{
+    $options_default = $this->default_general_options();
+    $options = get_option('stk_casino_general_options');
+
+    // Set the default value if not exists
+    if (!isset($options['currency_code_position'])) $options['currency_code_position'] = $options_default['currency_code_position'];
+
+    // Render input
+    echo '<fieldset>';
+    echo '<label><input type="radio" name="stk_casino_general_options[currency_code_position]" value="before" ' . checked('before', $options['currency_code_position'], false) . '> ' . __('Before', 'stk-casino') . '</label><br>';
+    echo '<label><input type="radio" name="stk_casino_general_options[currency_code_position]" value="after" ' . checked('after', $options['currency_code_position'], false) . '> ' . __('After', 'stk-casino') . '</label>';
+    echo '</fieldset>';
 }
 }
