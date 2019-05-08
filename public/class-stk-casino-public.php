@@ -335,6 +335,7 @@ class Stk_Casino_Public
                         ),
                         'choices' => array(
                             'free' => 'FreeSpins',
+                            'free_alt_1' => 'Free Spins',
                             'real' => 'RealSpins',
                             'big' => 'BigSpins',
                         ),
@@ -342,7 +343,7 @@ class Stk_Casino_Public
                         'allow_null' => 1,
                         'multiple' => 0,
                         'ui' => 0,
-                        'return_format' => 'label',
+                        'return_format' => 'value',
                         'ajax' => 0,
                         'placeholder' => '',
                     ),
