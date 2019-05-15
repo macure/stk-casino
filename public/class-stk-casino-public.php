@@ -181,7 +181,15 @@ class Stk_Casino_Public
                         'type' => 'number',
                         'instructions' => '',
                         'required' => 1,
-                        'conditional_logic' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_5cdc18b5188f2',
+                                    'operator' => '!=',
+                                    'value' => '1',
+                                ),
+                            ),
+                        ),
                         'wrapper' => array(
                             'width' => '',
                             'class' => '',
@@ -202,7 +210,15 @@ class Stk_Casino_Public
                         'type' => 'number',
                         'instructions' => '',
                         'required' => 1,
-                        'conditional_logic' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_5cdc18b5188f2',
+                                    'operator' => '!=',
+                                    'value' => '1',
+                                ),
+                            ),
+                        ),
                         'wrapper' => array(
                             'width' => '',
                             'class' => '',
@@ -223,7 +239,15 @@ class Stk_Casino_Public
                         'type' => 'true_false',
                         'instructions' => 'This will override any global currency settings',
                         'required' => 0,
-                        'conditional_logic' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_5cdc18b5188f2',
+                                    'operator' => '!=',
+                                    'value' => '1',
+                                ),
+                            ),
+                        ),
                         'wrapper' => array(
                             'width' => '',
                             'class' => '',
@@ -247,6 +271,11 @@ class Stk_Casino_Public
                                 array(
                                     'field' => 'field_5cd166a520688',
                                     'operator' => '==',
+                                    'value' => '1',
+                                ),
+                                array(
+                                    'field' => 'field_5cdc18b5188f2',
+                                    'operator' => '!=',
                                     'value' => '1',
                                 ),
                             ),
@@ -305,6 +334,52 @@ class Stk_Casino_Public
                         ),
                     ),
                     array(
+                        'key' => 'field_5cdc18b5188f2',
+                        'label' => 'Bonus - override',
+                        'name' => 'bonus_override',
+                        'type' => 'true_false',
+                        'instructions' => 'Override bonus values with the custom text',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'message' => 'Use text override',
+                        'default_value' => 0,
+                        'ui' => 0,
+                        'ui_on_text' => '',
+                        'ui_off_text' => '',
+                    ),
+                    array(
+                        'key' => 'field_5cdc19423f628',
+                        'label' => 'Bonus Text (Alternative)',
+                        'name' => 'bonus_text_alternative',
+                        'type' => 'textarea',
+                        'instructions' => 'Leave empty if you would like to show no text',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_5cdc18b5188f2',
+                                    'operator' => '==',
+                                    'value' => '1',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'maxlength' => '',
+                        'rows' => '',
+                        'new_lines' => 'br',
+                    ),
+                    array(
                         'key' => 'field_5cc2ddec6ea26',
                         'label' => 'Spins',
                         'name' => '',
@@ -327,7 +402,15 @@ class Stk_Casino_Public
                         'type' => 'select',
                         'instructions' => '',
                         'required' => 0,
-                        'conditional_logic' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_5cdc17bf932b3',
+                                    'operator' => '!=',
+                                    'value' => '1',
+                                ),
+                            ),
+                        ),
                         'wrapper' => array(
                             'width' => '',
                             'class' => '',
@@ -360,6 +443,11 @@ class Stk_Casino_Public
                                     'field' => 'field_5cc2db8b1db4b',
                                     'operator' => '!=empty',
                                 ),
+                                array(
+                                    'field' => 'field_5cdc17bf932b3',
+                                    'operator' => '!=',
+                                    'value' => '1',
+                                ),
                             ),
                         ),
                         'wrapper' => array(
@@ -374,6 +462,52 @@ class Stk_Casino_Public
                         'min' => '',
                         'max' => '',
                         'step' => '',
+                    ),
+                    array(
+                        'key' => 'field_5cdc17bf932b3',
+                        'label' => 'Spin - override',
+                        'name' => 'spin_override',
+                        'type' => 'true_false',
+                        'instructions' => 'Override spin values with the custom text',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'message' => 'Use text override',
+                        'default_value' => 0,
+                        'ui' => 0,
+                        'ui_on_text' => '',
+                        'ui_off_text' => '',
+                    ),
+                    array(
+                        'key' => 'field_5cdc164f33d67',
+                        'label' => 'Spin Text (Alternative)',
+                        'name' => 'spin_text_alternative',
+                        'type' => 'textarea',
+                        'instructions' => 'Leave empty if you would like to show no text',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_5cdc17bf932b3',
+                                    'operator' => '==',
+                                    'value' => '1',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'maxlength' => '',
+                        'rows' => '',
+                        'new_lines' => 'br',
                     ),
                     array(
                         'key' => 'field_5cc1a4325b2c5',
