@@ -152,6 +152,8 @@ class Stk_Casino_Public
      */
     public function register_local_field_group()
     {
+        return null;
+
         if (function_exists('acf_add_local_field_group')) :
 
             acf_add_local_field_group(array(
@@ -597,74 +599,11 @@ class Stk_Casino_Public
                         'default_value' => '',
                         'placeholder' => '',
                     ),
-                ),
-                'location' => array(
                     array(
-                        array(
-                            'param' => 'post_type',
-                            'operator' => '==',
-                            'value' => 'casino',
-                        ),
-                    ),
-                ),
-                'menu_order' => 0,
-                'position' => 'acf_after_title',
-                'style' => 'default',
-                'label_placement' => 'top',
-                'instruction_placement' => 'label',
-                'hide_on_screen' => '',
-                'active' => true,
-                'description' => '',
-            ));
-
-            acf_add_local_field_group(array(
-                'key' => 'group_5d88cb84c5aae',
-                'title' => 'Casino Style',
-                'fields' => array(
-                    array(
-                        'key' => 'field_5d88cba839c40',
-                        'label' => 'Featured image background',
-                        'name' => 'featured_image_background',
-                        'type' => 'color_picker',
-                        'instructions' => 'Choose the background colour for featured image.',
-                        'required' => 0,
-                        'conditional_logic' => 0,
-                        'wrapper' => array(
-                            'width' => '',
-                            'class' => '',
-                            'id' => '',
-                        ),
-                        'default_value' => '#d7dfe2',
-                    ),
-                ),
-                'location' => array(
-                    array(
-                        array(
-                            'param' => 'post_type',
-                            'operator' => '==',
-                            'value' => 'casino',
-                        ),
-                    ),
-                ),
-                'menu_order' => 0,
-                'position' => 'side',
-                'style' => 'default',
-                'label_placement' => 'top',
-                'instruction_placement' => 'label',
-                'hide_on_screen' => '',
-                'active' => true,
-                'description' => '',
-            ));
-
-            acf_add_local_field_group(array(
-                'key' => 'group_5cc85d89cbd29',
-                'title' => 'Page Data',
-                'fields' => array(
-                    array(
-                        'key' => 'field_5cc85da0fb39c',
-                        'label' => 'Content intro',
-                        'name' => 'content_intro',
-                        'type' => 'wysiwyg',
+                        'key' => 'field_5d95dcdb4c00d',
+                        'label' => 'Terms & Conditions',
+                        'name' => '',
+                        'type' => 'tab',
                         'instructions' => '',
                         'required' => 0,
                         'conditional_logic' => 0,
@@ -673,19 +612,62 @@ class Stk_Casino_Public
                             'class' => '',
                             'id' => '',
                         ),
+                        'placement' => 'top',
+                        'endpoint' => 0,
+                    ),
+                    array(
+                        'key' => 'field_5d95dd33ee1b5',
+                        'label' => 'Show',
+                        'name' => 'terms_and_conditions_show',
+                        'type' => 'true_false',
+                        'instructions' => 'Display Terms & Conditions text',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'message' => '',
+                        'default_value' => 0,
+                        'ui' => 0,
+                        'ui_on_text' => '',
+                        'ui_off_text' => '',
+                    ),
+                    array(
+                        'key' => 'field_5d95ddafee1b6',
+                        'label' => 'Text',
+                        'name' => 'terms_and_conditions_text',
+                        'type' => 'wysiwyg',
+                        'instructions' => 'Terms & Conditions text',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_5d95dd33ee1b5',
+                                    'operator' => '==',
+                                    'value' => '1',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
                         'default_value' => '',
-                        'tabs' => 'all',
+                        'tabs' => 'visual',
                         'toolbar' => 'full',
-                        'media_upload' => 1,
+                        'media_upload' => 0,
                         'delay' => 0,
                     ),
                 ),
                 'location' => array(
                     array(
                         array(
-                            'param' => 'page_type',
+                            'param' => 'post_type',
                             'operator' => '==',
-                            'value' => 'front_page',
+                            'value' => 'casino',
                         ),
                     ),
                 ),
@@ -698,7 +680,6 @@ class Stk_Casino_Public
                 'active' => true,
                 'description' => '',
             ));
-
 
         endif;
     }
