@@ -152,8 +152,6 @@ class Stk_Casino_Public
      */
     public function register_local_field_group()
     {
-        return null;
-
         if (function_exists('acf_add_local_field_group')) :
 
             acf_add_local_field_group(array(
