@@ -44,6 +44,7 @@ class Stk_Casino_Cloak_Affiliate_Link
             $affiliateLink = get_field('affiliate_link', $casino);
 
             if ($affiliateLink) {
+                $this->recordVisit($casino);
                 $this->redirectTo($affiliateLink);
             }
         }
@@ -56,9 +57,24 @@ class Stk_Casino_Cloak_Affiliate_Link
      * @param integer $status
      * @return void
      */
-    public static function redirectTo($url, $status=301)
+    public static function redirectTo($url, $status = 302)
     {
         wp_redirect($url, $status);
         exit;
+    }
+
+    /**
+     * Saves the visit to the database
+     *
+     * @param WP_Post $post
+     * @return void
+     */
+    public function recordVisit($post): void
+    {
+        global $wpdb;
+
+        $wpdb->insert($wpdb->prefix . 'stk_casino_affiliate_count', [
+            'post_id' => $post->ID
+        ], ['%d']);
     }
 }

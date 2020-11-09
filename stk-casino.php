@@ -28,7 +28,7 @@ require_once 'vendor/autoload.php';
  */
 
 // If this file is called directly, abort.
-if (! defined('WPINC')) {
+if (!defined('WPINC')) {
     die;
 }
 
@@ -46,7 +46,8 @@ define('STK_CASINO_VERSION', '1.0.0');
 function activate_stk_casino()
 {
     require_once plugin_dir_path(__FILE__) . 'includes/class-stk-casino-activator.php';
-    Stk_Casino_Activator::activate();
+    $activator = new Stk_Casino_Activator();
+    $activator->activate();
 }
 
 /**

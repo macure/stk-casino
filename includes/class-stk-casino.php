@@ -107,6 +107,11 @@ class Stk_Casino
          */
         require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-stk-casino-loader.php';
 
+        /** 
+         * The class responsible for activation/deactivation
+         */
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-stk-casino-activator.php';
+
         /**
          * The class responsible for defining internationalization functionality
          * of the plugin.
@@ -189,12 +194,14 @@ class Stk_Casino
     {
         $plugin_public = new Stk_Casino_Public($this->get_plugin_name(), $this->get_version());
         $plugin_shortcodes = new Stk_Casino_Shortcodes();
+        $plugin_activator = new Stk_Casino_Activator();
 
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
         $this->loader->add_action('init', $plugin_public, 'register_custom_post_types');
-        $this->loader->add_action('acf/init', $plugin_public, 'register_local_field_group');
+        //$this->loader->add_action('acf/init', $plugin_public, 'register_local_field_group');
         $this->loader->add_action('init', $plugin_shortcodes, 'register_shortcodes');
+        $this->loader->add_action('plugins_loaded', $plugin_activator, 'affiliate_tracker_install');
     }
 
     /**
