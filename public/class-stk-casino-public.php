@@ -739,6 +739,7 @@ class Stk_Casino_Public
                             'interac' => 'Interac',
                             'klarna' => 'Klarna',
                             'mastercard' => 'MasterCard',
+                            'muchbetter' => 'Muchbetter',
                             'neosurf' => 'Neosurf',
                             'neteller' => 'Neteller',
                             'paynplay2' => 'Pay N Play',
