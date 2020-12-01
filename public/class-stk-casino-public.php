@@ -724,6 +724,7 @@ class Stk_Casino_Public
                         ),
                         'choices' => array(
                             'amex' => 'American Express',
+                            'bankid' => 'BankID',
                             'bitcoin' => 'Bitcoin',
                             'boku' => 'Boku',
                             'citadel' => 'Citadel',
