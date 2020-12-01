@@ -751,6 +751,7 @@ class Stk_Casino_Public
                             'sofort' => 'Sofort',
                             'trustly' => 'Trustly',
                             'visa' => 'Visa',
+                            'zimpler' => 'Zimpler'
                         ),
                         'allow_custom' => 0,
                         'default_value' => array(),
