@@ -743,6 +743,7 @@ class Stk_Casino_Public
                         ),
                         'choices' => array(
                             'amex' => 'American Express',
+                            'bank_transfer' => 'Bank Transfer',
                             'bitcoin' => 'Bitcoin',
                             'boku' => 'Boku',
                             'citadel' => 'Citadel',
@@ -758,6 +759,8 @@ class Stk_Casino_Public
                             'interac' => 'Interac',
                             'klarna' => 'Klarna',
                             'mastercard' => 'MasterCard',
+                            'mifinity' => 'Mifinity',
+                            'muchbetter' => 'Much Better',
                             'neosurf' => 'Neosurf',
                             'neteller' => 'Neteller',
                             'paynplay2' => 'Pay N Play',
@@ -768,6 +771,7 @@ class Stk_Casino_Public
                             'sofort' => 'Sofort',
                             'trustly' => 'Trustly',
                             'visa' => 'Visa',
+                            'venus_point' => 'Venus Point'
                         ),
                         'allow_custom' => 0,
                         'default_value' => array(),
